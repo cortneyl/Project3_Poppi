@@ -25,6 +25,9 @@
             border-radius: 8px; /* Optional: adds rounded corners */
         }
 
+        .infro {
+           text-align: center;
+        }
         /* Mobile optimization */
         @media screen and (max-width: 768px) {
             .info-video {
