@@ -1,0 +1,44 @@
+
+       body {
+        margin: 0;
+        padding: 0;
+
+       }
+       * {
+        box-sizing: border-box;
+       }
+       
+       .info-video {
+            width: 100%;
+            max-width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .info-video video {
+            width: 100%;
+            margin: 0;
+            max-width: 1200px; /* Maximum width for desktop */
+            aspect-ratio: 1920 /1080;
+            display: block;
+            border-radius: 8px; /* Optional: adds rounded corners */
+        }
+
+        /* Mobile optimization */
+        @media screen and (max-width: 768px) {
+            .info-video {
+               
+            }
+            
+            .info-video video {
+                max-width: 100%;
+            }
+        }
+
+        /* Remove padding for very small screens */
+        @media screen and (max-width: 480px) {
+            .info-video {
+              
+            }
+        }
