@@ -7,28 +7,82 @@
        * {
         box-sizing: border-box;
        }
+.sodas-section {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-flow: column wrap;
+  gap: 40px;
+  overflow-x: auto;
+  padding-block: 10em 8em;
+  padding-inline: 4em; /* equals 64px */
+  background-color: #C2B0D8;
+}
 
+.section-title {
+  width: 100%;
+}
+
+/* start */
+.soda-scroll {
+  width: 100%; /* Full width of the site */
+  display: flex; /* Enable flexbox */
+  gap: 30px; /* Space between cards */
+  overflow-x: auto; /* Enable horizontal scrolling */
+  scroll-behavior: smooth;
+  padding: 1em 1em;
+}
+
+.soda-scroll::-webkit-scrollbar {
+  height: 8px;
+}
+
+.soda-scroll::-webkit-scrollbar-thumb {
+
+  border-radius: 4px;
+}
+
+.soda-photos {
+  display: flex;
+  gap: 30px;
+  width: 100%;
+}
+
+.soda-photos img {
+  flex: 0 0 calc(25% - 22.5px); /* Show 4 cards, accounting for gap */
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.soda-photos img:hover {
+  transform: scale(1.05);
+}
        
-       .info-video {
+ .info-video {
             width: 100%;
             max-width: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
-        }
+ }
 
-        .info-video video {
+ .info-video video {
             width: 100%;
             margin: 0;
             max-width: 1200px; /* Maximum width for desktop */
             aspect-ratio: 1920 /1080;
             display: block;
             border-radius: 8px; /* Optional: adds rounded corners */
-        }
+  }
 
-        .infro {
+ .infro {
            text-align: center;
-        }
+ }
         /* Mobile optimization */
         @media screen and (max-width: 768px) {
             .info-video {
