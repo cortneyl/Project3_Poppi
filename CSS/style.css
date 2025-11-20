@@ -1,102 +1,144 @@
+body {
+    margin: 0;
+    padding: 0;
+}
 
-       body {
-        margin: 0;
-        padding: 0;
+* {
+    box-sizing: border-box;
+}
 
-       }
-       * {
-        box-sizing: border-box;
-       }
 .sodas-section {
-  width: 100%;
-  height: fit-content;
-  display: flex;
-  flex-flow: column wrap;
-  gap: 40px;
-  overflow-x: auto;
-  padding-block: 10em 8em;
-  padding-inline: 4em; /* equals 64px */
-  background-color: #C2B0D8;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-flow: column wrap;
+    gap: 40px;
+    overflow-x: auto;
+    padding-block: 10em 8em;
+    padding-inline: 4em; /* equals 64px */
+    background-color: #C2B0D8;
 }
 
 .section-title {
-  width: 100%;
+    width: 100%;
 }
 
 /* start */
 .soda-scroll {
-  width: 100%; /* Full width of the site */
-  display: flex; /* Enable flexbox */
-  gap: 30px; /* Space between cards */
-  overflow-x: auto; /* Enable horizontal scrolling */
-  scroll-behavior: smooth;
-  padding: 1em 1em;
+    width: 100%; /* Full width of the site */
+    display: flex; /* Enable flexbox */
+    gap: 30px; /* Space between cards */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    scroll-behavior: smooth;
+    padding: 1em 1em;
 }
 
 .soda-scroll::-webkit-scrollbar {
-  height: 8px;
+    height: 8px;
 }
 
 .soda-scroll::-webkit-scrollbar-thumb {
-
-  border-radius: 4px;
+    border-radius: 4px;
 }
 
 .soda-photos {
-  display: flex;
-  gap: 30px;
-  width: 100%;
+    display: flex;
+    gap: 30px;
+    width: 100%;
 }
 
 .soda-photos img {
-  flex: 0 0 calc(25% - 22.5px); /* Show 4 cards, accounting for gap */
-  cursor: pointer;
-  overflow: hidden;
-  border-radius: 10px;
-  transition: transform 0.3s ease;
-  width: 100%;
-  display: block;
-  object-fit: cover;
+    flex: 0 0 calc(25% - 22.5px); /* Show 4 cards, accounting for gap */
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    width: 100%;
+    display: block;
+    object-fit: cover;
 }
 
 .soda-photos img:hover {
-  transform: scale(1.05);
+    transform: scale(1.05);
 }
-       
- .info-video {
-            width: 100%;
-            max-width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
- }
 
- .info-video video {
-            width: 100%;
-            margin: 0;
-            max-width: 1200px; /* Maximum width for desktop */
-            aspect-ratio: 1920 /1080;
-            display: block;
-            border-radius: 8px; /* Optional: adds rounded corners */
-  }
+.info-video {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
- .infro {
-           text-align: center;
- }
-        /* Mobile optimization */
-        @media screen and (max-width: 768px) {
-            .info-video {
-               
-            }
-            
-            .info-video video {
-                max-width: 100%;
-            }
-        }
+.info-video video {
+    width: 100%;
+    margin: 0;
+    max-width: 1200px; /* Maximum width for desktop */
+    aspect-ratio: 1920 /1080;
+    display: block;
+    border-radius: 8px; /* Optional: adds rounded corners */
+}
 
-        /* Remove padding for very small screens */
-        @media screen and (max-width: 480px) {
-            .info-video {
-              
-            }
-        }
+.infro {
+    position: relative;
+    text-align: center;
+    padding: 0 2em;
+}
+
+.infro img {
+    width: 100%;
+    display: block;
+}
+
+.infro h1 {
+    position: absolute;
+    top: 15%; /* Adjust this value to position vertically */
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    font-size: 4rem;
+    font-weight: bold;
+    color: #000;
+    z-index: 2;
+}
+
+.infro p {
+    position: absolute;
+    top: 25%; /* Adjust this value based on where you want the text */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%; /* Control text width */
+    max-width: 900px;
+    margin: 2em;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #000;
+    z-index: 2;
+}
+.infro {
+    position: relative;
+    text-align: center;
+    padding: 0; /* Remove padding to make it full width */
+    width: 100%; /* Ensure full width */
+}
+
+.infro img {
+    width: 100%;
+    max-width: 100%; /* Remove any max-width restrictions */
+    display: block;
+    height: 400px; /* Adjust height as needed */
+    object-fit: cover;
+}
+
+@media screen and (max-width: 768px) {
+    .infro h1 {
+        font-size: 2.5rem;
+        top: 10%;
+    }
+    
+    .infro p {
+        font-size: 0.9rem;
+        width: 90%;
+        top: 20%;
+    }
+}
