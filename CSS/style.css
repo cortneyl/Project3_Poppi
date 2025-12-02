@@ -26,10 +26,9 @@ body {
 .soda-scroll {
     width: 100%; /* Full width of the site */
     display: flex; /* Enable flexbox */
-    gap: 30px; /* Space between cards */
     overflow-x: auto; /* Enable horizontal scrolling */
     scroll-behavior: smooth;
-    padding: 1em 1em;
+    padding: 5em 1em;
 }
 
 .soda-scroll::-webkit-scrollbar {
@@ -40,10 +39,11 @@ body {
 .soda-photos {
     display: flex;
     width: 100%;
+    gap: 60px; /* Increased gap between sodas - adjust this value */
 }
 
 .soda-photos img {
-    flex: 0 0 calc(25% - 22.5px); /* Show 4 cards, accounting for gap */
+    flex: 0 0 calc(25% - 45px); /* Adjust this to account for the new gap */
     cursor: pointer;
     overflow: hidden;
     border-radius: 10px;
