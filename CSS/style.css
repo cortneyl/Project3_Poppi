@@ -13,8 +13,7 @@ body {
     display: flex;
     flex-flow: column wrap;
     overflow-x: auto;
-    padding-block: 2em 2em;
-    padding-inline: 1em; /* equals 64px */
+
     background-color: #C2B0D8;
 }
 
@@ -28,7 +27,8 @@ body {
     display: flex; /* Enable flexbox */
     overflow-x: auto; /* Enable horizontal scrolling */
     scroll-behavior: smooth;
-    padding: 5em 1em;
+   margin-top: 6em;
+   margin-bottom: 2em;
 }
 
 .soda-scroll::-webkit-scrollbar {
@@ -166,7 +166,6 @@ body {
 
 .main-header {
   background-color: #C2B0D8;
-  padding: 15px 30px;
 }
 
 .navbar {
@@ -186,7 +185,7 @@ body {
   display: flex;
   list-style: none;
   gap: 30px;
-  margin: 0;
+  margin: 1em;
   padding: 0;
 }
 
