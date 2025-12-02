@@ -1,8 +1,9 @@
 
   @import url("https://use.typekit.net/ppy0avf.css");
+  @import url("https://use.typekit.net/ppy0avf.css");
 body {
-font-family: "bogart", sans-serif;
-font-weight: 600;
+font-family: "poppins", sans-serif;
+font-weight: 400;
 font-style: normal;
     margin: 0;
     padding: 0;
@@ -18,8 +19,8 @@ font-style: normal;
     display: flex;
     flex-flow: column wrap;
     overflow-x: auto;
-
     background-color: #C2B0D8;
+    
 }
 
 .section-title {
@@ -32,7 +33,7 @@ font-style: normal;
     display: flex; /* Enable flexbox */
     overflow-x: auto; /* Enable horizontal scrolling */
     scroll-behavior: smooth;
-   margin-top: 6em;
+   margin-top: 6em;url(http://127.0.0.1:5500/photos/Poppi-large1.png)
    margin-bottom: 2em;
 }
 
@@ -44,6 +45,7 @@ font-style: normal;
 .soda-photos {
     display: flex;
     width: 100%;
+    margin-bottom: 2em;
     gap: 60px; /* Increased gap between sodas - adjust this value */
 }
 
@@ -96,11 +98,14 @@ font-style: normal;
 }
 
 .infro h1 {
+    font-family: "bogart", sans-serif;
+font-weight: 600;
+font-style: normal;
     position: absolute;
     top:8%; 
     left: 50%;
     transform: translateX(-50%);
-    margin: 0;
+    margin-top: 1.5em;
     font-size: 4rem;
     font-weight: bold;
     color: #000;
@@ -119,6 +124,8 @@ font-style: normal;
     color: #000;
     text-align: center;
     z-index: 2;
+  
+    padding: 6em;
 }
 .infro {
     position: relative;
@@ -197,6 +204,7 @@ font-style: normal;
 }
 
 .nav-links a {
+    
   color: white;
   text-decoration: none;
   font-size: 18px;
@@ -245,12 +253,12 @@ font-style: normal;
 
 /* Photo Gallery Section */
 .photo-gallery {
-  padding: 100px 20px 300px 20px;
+padding: 1em;
   background-color: transparent;
   position: relative;
   z-index: 0;
-  margin-top: 900px;
-  margin-bottom: -600px;
+
+
 }
 
 .gallery-grid {
@@ -294,14 +302,49 @@ font-style: normal;
   background-color: #FFE5F0;
 }
 
-/* Footer Section */
-.footer-image {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  position: relative;
-  z-index: 1;
-}
+
+ .button-container {
+            text-align: center;
+        }
+
+        .poppi-button {
+            display: inline-block;
+            padding: 18px 40px;
+            font-size: 18px;
+            font-weight: 600;
+            text-decoration: none;
+            color: white;
+            background: #8ECCD2;
+            border-radius: 50px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .poppi-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 100%);
+            transition: left 0.5s ease;
+        }
+
+        .poppi-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .poppi-button:hover::before {
+            left: 100%;
+        }
+
+        .poppi-button:active {
+            transform: translateY(-1px);
+        }
 
 /* Mobile Responsive */
 @media (max-width: 768px) {
@@ -315,18 +358,18 @@ font-style: normal;
 }
 
 /* START Footer Section by Laurissa*/
-.footer-image {
-  width: 100%;
+footer {
   margin: 0;
   padding: 0;
-}
-
-.footer-image img {
   width: 100%;
-  height: auto;
   display: block;
   margin: 0;
   padding: 0;
+    background: url(../photos/poppi-footer.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+
 }
 
 /* Copyright Section */
@@ -336,13 +379,13 @@ font-style: normal;
   padding: 20px;
   margin: 0;
   position: relative;
-  margin-top: -60px;
   z-index: 2;
 }
 
 .copyright p {
   color: white;
-  font-size: 14px;
+  font-size: 11px;
   margin: 0;
+  
 }
 /* Footer Section by Laurissa ends here*/
