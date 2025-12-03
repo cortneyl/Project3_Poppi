@@ -58,6 +58,116 @@
  <!--<p>Poppi’s mission is to reinvent the soda experience by creating a delicious, better-for-you beverage that blends real fruit flavor with functional ingredients that support everyday wellness. Built on the belief that feeling good should taste good, Poppi combines refreshing carbonation with prebiotic fiber and apple cider vinegar to offer a modern alternative to traditional sodas. The brand is committed to transparency, clean ingredients, and vibrant, uplifting design that reflects a lifestyle centered on balance, confidence, and joy. Poppi strives to make wellness more accessible and enjoyable, empowering consumers to choose drinks that fit both their taste and their health goals.</p>-->
  </section>
 
+ <section id="survey">
+  <button class="trigger-btn" onclick="openSurvey()">Take Our Survey</button>
+
+    <div class="overlay" id="overlay" onclick="closeSurvey(event)">
+        <div class="survey-popup" onclick="event.stopPropagation()">
+            <button class="close-btn" onclick="closeSurvey()">&times;</button>
+            
+            <div id="surveyForm">
+                <h2>We'd Love Your Feedback!</h2>
+                <p class="subtitle">Help us improve Poppi by answering a few quick questions</p>
+                
+                <form onsubmit="submitSurvey(event)">
+                    <div class="form-group">
+                        <label>1. How satisfied are you with Poppi? *</label>
+                        <div class="radio-group">
+                            <label class="radio-option">
+                                <input type="radio" name="satisfaction" value="very-satisfied" required>
+                                Very Satisfied
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="satisfaction" value="satisfied">
+                                Satisfied
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="satisfaction" value="neutral">
+                                Neutral
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="satisfaction" value="dissatisfied">
+                                Dissatisfied
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="satisfaction" value="very-dissatisfied">
+                                Very Dissatisfied
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="favorite-flavor">2. What's your favorite flavor? *</label>
+                        <input type="text" id="favorite-flavor" placeholder="e.g., Strawberry Lemon, Orange, Classic Cola..." required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="future-flavor">3. What flavor would you like to see in the future? *</label>
+                        <input type="text" id="future-flavor" placeholder="Share your flavor ideas..." required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="favorite-color">4. What's your favorite color from our brand? *</label>
+                        <input type="text" id="favorite-color" placeholder="e.g., Pink, Orange, Purple..." required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="website-wish">5. What do you wish was on our website?</label>
+                        <textarea id="website-wish" placeholder="Tell us what would make your experience better..."></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Submit Survey</button>
+                </form>
+            </div>
+
+            <div class="success-message" id="successMessage">
+                <div class="success-icon">✓</div>
+                <h3>Thank You!</h3>
+                <p>Your feedback has been submitted successfully.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openSurvey() {
+            document.getElementById('overlay').classList.add('active');
+        }
+
+        function closeSurvey(event) {
+            if (event && event.target !== document.getElementById('overlay')) {
+                return;
+            }
+            document.getElementById('overlay').classList.remove('active');
+            setTimeout(() => {
+                document.getElementById('surveyForm').style.display = 'block';
+                document.getElementById('successMessage').classList.remove('active');
+            }, 300);
+        }
+
+        function submitSurvey(event) {
+            event.preventDefault();
+            
+            const formData = {
+                satisfaction: document.querySelector('input[name="satisfaction"]:checked').value,
+                favoriteFlavor: document.getElementById('favorite-flavor').value,
+                futureFlavor: document.getElementById('future-flavor').value,
+                favoriteColor: document.getElementById('favorite-color').value,
+                websiteWish: document.getElementById('website-wish').value
+            };
+            
+            console.log('Survey submitted:', formData);
+            
+            document.getElementById('surveyForm').style.display = 'none';
+            document.getElementById('successMessage').classList.add('active');
+            
+            setTimeout(() => {
+                closeSurvey();
+                event.target.reset();
+            }, 2000);
+        }
+    </script>
+</section>
+
 
  <!--Laurissa Added this-->
 
