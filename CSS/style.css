@@ -345,7 +345,12 @@ padding: 1em;
         .poppi-button:active {
             transform: translateY(-1px);
         }
-
+.blue-background{
+    width: 100%;
+    max-width: 100%; 
+    display: block;
+   object-fit: cover;
+}
 /* Mobile Responsive */
 @media (max-width: 768px) {
   .gallery-grid {
