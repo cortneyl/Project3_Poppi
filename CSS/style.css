@@ -372,6 +372,16 @@ padding: 1em;
     justify-content: center;
     position: relative;
     z-index: 10;
+    }
+
+    .friends {
+      
+    }
+#survey {
+  background-color: #8ECCD2;
+  padding-top: 7em;
+  margin-top: -5em;
+  padding-bottom: 5em;
 }
 
         .trigger-btn {
@@ -387,6 +397,8 @@ font-style: normal;
             border-radius: 8px;
             cursor: pointer;
             transition: all 0.3s ease;
+            margin: auto;
+            display: block;
             
         }
 
@@ -589,10 +601,11 @@ footer {
   margin: 0;
   padding: 0;
   width: 100%;
+  aspect-ratio:2500 / 1149;
   display: block;
   margin: 0;
   padding: 0;
-    background: url(../photos/Pink\ Footer2.png);
+    background: url(../photos/poppi-footer.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: left bottom;
