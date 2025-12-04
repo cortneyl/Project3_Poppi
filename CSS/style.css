@@ -132,28 +132,31 @@ font-style: normal;
     text-align: center;
     padding: 0; 
     width: 100%; 
+    background-image: url(../photos/greenwordless.png);
+    background-size: cover;
+    aspect-ratio: 9543 / 7934;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+
+
 }
 
-.infro img {
-    width: 100%;
-    max-width: 100%; 
-    display: block;
-   object-fit: cover;
+.about{
+  width: 80%;
+  
 }
-
-@media screen and (max-width: 768px) {
-    .infro h1 {
-        font-size: 2.5rem;
-        top: 10%;
-    }
-    
-    .infro p {
-        font-size: 0.9rem;
-        width: 90%;
-        top: 20%;
-    }
+.about p {
+  color: white;
+  padding-top: 2em;
 }
-
+.about h1 {
+  color: white;
+  line-height: 65px;
+  font-size: 45px;
+ 
+}
 
 /* Laurissa's Section Below  (Header/Navbar Styles and footer and gallary) */
 
