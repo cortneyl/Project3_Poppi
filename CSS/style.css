@@ -305,6 +305,7 @@ padding: 1em;
 
  .button-container {
             text-align: center;
+            padding-top: 30em;
         }
 
         .poppi-button {
@@ -320,6 +321,7 @@ padding: 1em;
             transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
+            
         }
 
         .poppi-button::before {
@@ -605,7 +607,7 @@ footer {
   display: block;
   margin: 0;
   padding: 0;
-    background: url(../photos/poppi-footer.png);
+    background: url(../photos/poppi\ footer\ tall.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: left bottom;
@@ -624,8 +626,9 @@ footer {
 
 .copyright p {
   color: white;
-  font-size: 11px;
+  font-size: 10px;
   margin: 0;
+  margin-top: 15em;
   
 }
 /* Footer Section by Laurissa ends here*/
