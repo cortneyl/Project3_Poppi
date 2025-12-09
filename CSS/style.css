@@ -128,19 +128,47 @@ font-style: normal;
     padding: 6em;
 }
 .infro {
-    position: relative;
-    text-align: center;
-    padding: 0; 
-    width: 100%; 
-    background-image: url(../photos/greenwordless.png);
-    background-size: cover;
-    aspect-ratio: 9543 / 7934;
+  position: relative;
+  width: 100%;
+  
+  /* Reserve space for both images */
+  padding-top: calc(100% * (3578 / 9809));     /* TOP image height */
+  padding-bottom: calc(100% * (4667 / 9809));  /* BOTTOM image height */
+
   display: flex;
-  flex-flow: row wrap;
   justify-content: center;
   align-items: center;
+}
+
+/* TOP IMAGE */
+.infro::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100% * (3578 / (3578 + 4667)));
+  
+  background-image: url(../photos/splitgreenlow.png);
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+}
 
 
+/* BOTTOM IMAGE */
+.infro::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100% * (4667 / (3578 + 4667)));
+  
+  background-image: url(../photos/splitgreentop.png);
+  background-size: cover;
+  background-position: bottom center;
+  background-repeat: no-repeat;
 }
 
 .about{
