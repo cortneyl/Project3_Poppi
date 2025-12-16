@@ -94,48 +94,105 @@ body {
   line-height: 1.6;
 }
 
+
+
 .infro {
   text-align: center;
-  padding: 12vw 12vw;
+  padding: 15vw 20vw 12vw 20vw;
   width: 100%;
-  min-height: 500px; /* Minimum height instead of fixed aspect-ratio */
+  min-height: 600px;
   background-color: #b9d531;
   background-image: url(../photos/fruit-top-left.png),
     url(../photos/fruit-top-right.png), url(../photos/fruit-bottom-right.png),
     url(../photos/fruit-bottom-left.png);
   background-repeat: no-repeat;
-  background-size: 25%;
-  background-position: top left, top right, bottom right, bottom left;
+  background-size: 18%;
+  background-position: top 0 left 0, top 0 right 0, bottom 0 right 0, bottom 0 left 0;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
+  position: relative;
+  margin-bottom: 0;
+}
+
+.infro::after {
+  content: "";
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  aspect-ratio: 2000 / 79;
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  z-index: 1;
 }
 
 .about {
   width: 100%;
-  max-width: 900px; /* Limit maximum width for better readability */
+  max-width: 800px;
   color: white;
+  position: relative;
+  z-index: 2;
 }
 
 .about h1 {
-  margin: 0 0 1em 0;
-  line-height: 1;
+  margin: 0 0 1.5em 0;
+  line-height: 1.1;
   font-family: "bogart", sans-serif;
   font-weight: 600;
   font-style: normal;
-  font-size: clamp(2.5rem, 6vw, 4rem); /* Responsive font size */
+  font-size: clamp(2.5rem, 5vw, 4rem);
 }
 
 .about p {
-  text-align: justify;
-  font-size: clamp(1rem, 1.5vw, 1.1rem); /* Responsive font size */
-  line-height: 1.6;
+  text-align: center;
+  font-size: clamp(1rem, 1.4vw, 1.15rem);
+  line-height: 1.8;
   margin: 0;
-
+  hyphens: none;
+  word-spacing: normal;
 }
 
+/* Tablet responsive adjustments */
+@media (max-width: 1024px) {
+  .infro {
+    padding: 15vw 15vw 12vw 15vw;
+    background-size: 15%;
+    background-position: top 0 left 0, top 0 right 0, bottom 0 right 0, bottom 0 left 0;
+  }
+  
+  .about {
+    max-width: 700px;
+  }
+}
 
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+  .infro {
+    padding: 20vw 10vw 15vw 10vw;
+    background-size: 12%;
+    background-position: top 0 left 0, top 0 right 0, bottom 0 right 0, bottom 0 left 0;
+    min-height: 500px;
+  }
+  
+  .about {
+    max-width: 100%;
+  }
+  
+  .about p {
+    text-align: center;
+    line-height: 1.7;
+  }
+}
+
+@media (max-width: 480px) {
+  .infro {
+    padding: 25vw 8vw 18vw 8vw;
+    background-size: 10%;
+    background-position: top 0 left 0, top 0 right 0, bottom 0 right 0, bottom 0 left 0;
+  }
+}
 /* Laurissa's Section Below  (Header/Navbar Styles and footer and gallary) */
 
 .logo-top {
