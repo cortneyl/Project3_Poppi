@@ -96,7 +96,7 @@ body {
 
 .infro {
   text-align: center;
-  padding: 8vw 12vw;
+  padding: 12vw 12vw;
   width: 100%;
   min-height: 500px; /* Minimum height instead of fixed aspect-ratio */
   background-color: #b9d531;
@@ -326,7 +326,7 @@ body {
 #survey::before {
   /* this attaches the blue ripple to the survey */
   content: "";
-  background-image: url(../photos/blue-rippple.png);
+ 
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
