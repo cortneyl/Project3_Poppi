@@ -132,34 +132,9 @@ body {
   font-size: clamp(1rem, 1.5vw, 1.1rem); /* Responsive font size */
   line-height: 1.6;
   margin: 0;
-}
-/* Tablet responsive adjustments */
-@media (max-width: 1024px) {
-  .infro {
-    padding: 10vw 10vw;
-    background-size: 20%;
-  }
+
 }
 
-/* Mobile responsive adjustments */
-@media (max-width: 768px) {
-  .infro {
-    padding: 15vw 8vw;
-    background-size: 18%;
-    min-height: 400px;
-  }
-  
-  .about p {
-    text-align: left; /* Better for small screens */
-  }
-}
-
-@media (max-width: 480px) {
-  .infro {
-    padding: 20vw 6vw;
-    background-size: 15%;
-  }
-}
 
 /* Laurissa's Section Below  (Header/Navbar Styles and footer and gallary) */
 
